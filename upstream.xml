@@ -22,7 +22,7 @@
 	<project name="transmart-extensions" />
 	<project name="Rmodules" />
 
-	<project name="transmart-dev">
+	<project name="transmart-dev" remote="thehyve">
 		<copyfile src='upstream-config.json' dest='config.json' />
 	</project>
 </manifest>
