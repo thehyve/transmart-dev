@@ -1,0 +1,16 @@
+{
+  "REPOSITORIES": [
+    "https://repo.transmartfoundation.org/content/repositories/public/",
+    "https://repo.thehyve.nl/content/repositories/public/"
+  ],
+  "SPECIAL-LOCATIONS": {
+    "transmart-core":          "transmart-core-db",
+    "transmart-core-db-tests": "transmart-core-db/transmart-core-db-tests",
+    "rdc-rmodules":            "Rmodules",
+    "transmart-gwas":          "transmart-gwas-plugin",
+    "folder-management":       "folder-management-plugin",
+    "transmart-java":          "transmart-extensions/transmart-java",
+    "search-domain":           "transmart-extensions/search-domain",
+    "biomart-domain":          "transmart-extensions/biomart-domain"
+  },
+}
