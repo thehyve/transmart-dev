@@ -13,10 +13,12 @@ class DependencyManagement {
     File topDirectory
     Map config
     Map<String, Object> plugins = [:]
+    List<String> ignoredPlugins
 
     DependencyManagement() {
         try {
             config = loadConfigFile()
+            ignoredPlugins = loadIgnoredPlugins()
         } catch (IOException ioException) {
             throw new IOException('Could not load config.json', ioException)
         }
@@ -41,6 +43,19 @@ class DependencyManagement {
         }
     }
 
+    List loadIgnoredPlugins() {
+        File f = new File(new File(userDir).parentFile,
+                "${new File(userDir).name}-ignore.json")
+        if (!f.exists()) {
+            return []
+        } else {
+            def slurper = new JsonSlurper()
+            f.withReader {
+                slurper.parse it
+            }
+        }
+    }
+
     void configureRepositories(configurer) {
         configurer.legacyResolve true // for secondary resolution in inline plugins
 
@@ -56,6 +71,10 @@ class DependencyManagement {
     }
 
     void configureInternalPlugin(String scope, String name, Closure closure = {}) {
+        if (name in ignoredPlugins) {
+            info "Ignoring plugin $name"
+            return
+        }
         String directoryName = (config.'SPECIAL-LOCATIONS')[name] ?: name
         def location = new File(topDirectory, directoryName)
         if (location.isDirectory()) {
@@ -122,17 +141,31 @@ class DependencyManagement {
                         return
                     }
 
-                    def msg = "Found a plugin directory at $dir that is a " +
-                                "possible conflict and may prevent grails from using " +
-                                "the in-place $name plugin."
-
-                    if (Environment.isWithinShell()) {
-                        GrailsConsole.instance.warn msg
-                    } else {
-                        println "[WARN]: $msg"
-                    }
+                    warn "Found a plugin directory at $dir that is a " +
+                         "possible conflict and may prevent grails from using " +
+                         "the in-place $name plugin."
                 }
             }
+        }
+    }
+
+    String getUserDir() {
+        System.getProperty('user.dir')
+    }
+
+    void warn(String msg) {
+        if (Environment.isWithinShell()) {
+            GrailsConsole.instance.warn msg
+        } else {
+            println "[WARN]: $msg"
+        }
+    }
+
+    void info(String msg) {
+        if (Environment.isWithinShell()) {
+            GrailsConsole.instance.log msg
+        } else {
+            println "[INFO]: $msg"
         }
     }
 }
