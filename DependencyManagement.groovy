@@ -72,7 +72,9 @@ class DependencyManagement {
 
     void configureInternalPlugin(String scope, String name, Closure closure = {}) {
         if (name in ignoredPlugins) {
-            info "Ignoring plugin $name"
+			if (Environment.isWithinShell()) {
+				info "Ignoring plugin $name"
+			}
             return
         }
         String directoryName = (config.'SPECIAL-LOCATIONS')[name] ?: name
@@ -157,7 +159,7 @@ class DependencyManagement {
         if (Environment.isWithinShell()) {
             GrailsConsole.instance.warn msg
         } else {
-            println "[WARN]: $msg"
+            println "[WARN] $msg"
         }
     }
 
@@ -165,7 +167,7 @@ class DependencyManagement {
         if (Environment.isWithinShell()) {
             GrailsConsole.instance.log msg
         } else {
-            println "[INFO]: $msg"
+            println "[INFO] $msg"
         }
     }
 }
