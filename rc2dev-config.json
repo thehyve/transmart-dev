@@ -1,0 +1,10 @@
+{
+  "REPOSITORIES": [
+    "https://repo.thehyve.nl/content/repositories/public/"
+  ],
+  "SPECIAL-LOCATIONS": {
+    "transmart-core":          "transmart-core-db",
+    "transmart-core-db-tests": "transmart-core-db/transmart-core-db-tests",
+    "rdc-rmodules":            "Rmodules",
+  },
+}

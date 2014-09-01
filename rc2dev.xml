@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="thehyve" fetch="ssh://git@github.com/thehyve/" />
+
+	<default remote="thehyve" revision="master" sync-c="true" sync-j="4" />
+
+	<project name="transmartApp" revision="rc2_dev" />
+	<project name="transmart-data" />
+	<project name="transmart-core-api" />
+	<project name="transmart-core-db" />
+	<project name="tranSMART-ETL" path="transmart-ETL" />
+	<project name="Rmodules" revision="rc2_dev" />
+
+	<project name="transmart-dev" remote="thehyve">
+		<copyfile src='upstream-config.json' dest='config.json' />
+	</project>
+</manifest>
