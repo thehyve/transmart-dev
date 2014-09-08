@@ -5,7 +5,7 @@
 
 	<default remote="transmart" revision="master" sync-c="true" sync-j="4" />
 
-	<project name="transmartApp" revision="fix_tests" />
+	<project name="transmartApp" />
 	<project name="transmart-data" />
 	<project name="transmart-core-api" />
 	<project name="transmart-core-db" />
@@ -16,10 +16,10 @@
 	<project name="transmart-rest-api" />
 	<!-- not included in 1.2 WAR for now -->
 	<!--<project name="blend4j-plugin" />-->
-	<project name="folder-management-plugin" revision="fix_tests" />
+	<project name="folder-management-plugin" />
 	<project name="transmart-legacy-db" />
 	<!-- biomart-domain, search-domain and transmart-java -->
-	<project name="transmart-extensions" revision="fix_tests" />
+	<project name="transmart-extensions" />
 	<project name="Rmodules" />
 
 	<project name="transmart-dev" remote="thehyve">
