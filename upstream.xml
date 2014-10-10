@@ -14,8 +14,8 @@
 	<project name="transmart-gwas-plugin" />
 	<project name="tranSMART-ETL" path="transmart-ETL" />
 	<project name="transmart-rest-api" />
-	<!-- not included in 1.2 WAR for now -->
-	<!--<project name="blend4j-plugin" />-->
+	<project name="transmart-metacore-plugin" />
+	<project name="blend4j-plugin" />
 	<project name="folder-management-plugin" />
 	<project name="transmart-legacy-db" />
 	<!-- biomart-domain, search-domain and transmart-java -->
