@@ -1,0 +1,10 @@
+{
+  "REPOSITORIES": [
+    "https://repo.transmartfoundation.org/content/repositories/public/",
+    "https://repo.thehyve.nl/content/repositories/public/"
+  ],
+  "SPECIAL-LOCATIONS": {
+    "transmart-core":          "core-db",
+    "transmart-core-db-tests": "core-db/transmart-core-db-tests",
+  },
+}

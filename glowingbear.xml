@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="thehyve" fetch="ssh://git@github.com/thehyve/" />
+	<remote name="transmart" fetch="ssh://git@github.com/transmart/" />
+
+	<default remote="transmart" revision="master" sync-c="true" sync-j="4" />
+
+	<project name="transmartApp" revision="just_rest" remote="thehyve" />
+	<project name="transmart-data" />
+	<project name="transmart-core-api" path="core-api" />
+	<project name="transmart-core-db" path="core-db" />
+	<project name="transmart-base-ui" path="base-ui" remote="thehyve" />
+
+	<project name="transmart-dev" remote="thehyve">
+		<copyfile src='glowingbear-config.json' dest='config.json' />
+	</project>
+</manifest>
