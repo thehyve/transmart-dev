@@ -6,5 +6,6 @@
   "SPECIAL-LOCATIONS": {
     "transmart-core":          "core-db",
     "transmart-core-db-tests": "core-db/transmart-core-db-tests",
+    "transmart-rest-api":      "rest-api",
   },
 }
