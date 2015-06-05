@@ -12,7 +12,6 @@
 	<project name="transmart-rest-api" path="rest-api" />
 	<project name="transmart-base-ui" path="base-ui" remote="thehyve" />
 	<project name="transmart-mydas" remote="thehyve" />
-	<project name="dalliance-plugin" remote="thehyve" />
 
 	<project name="transmart-dev" remote="thehyve">
 		<copyfile src='glowingbear-config.json' dest='config.json' />
