@@ -1,0 +1,62 @@
+apply plugin: 'maven'
+
+group 'org.transmartproject'
+version '1.0-SNAPSHOT'
+
+def getPomConfiguration() {
+    return {
+        name 'transmart-glowingbear-bundle'
+        packaging 'tar.bz2'
+        description 'Bundle of tranSMART WAR file + transmart-base-ui build'
+        inceptionYear '2015'
+        url 'https://github.com/thehyve/transmart-base-ui'
+        licenses {
+            license {
+                name 'GPLv3'
+                url 'https://www.gnu.org/licenses/gpl-3.0.txt'
+                distribution 'repo'
+            }
+        }
+    }
+}
+
+task buildBundle(type: Exec) {
+    workingDir '../..'
+    commandLine 'bsdtar', '-cf', 'transmart-glowingbear-bundle.tar.bz2',
+            '-s', '@^transmartApp/target@war@',
+            '-s', '@^transmart-base-ui/dist@html@',
+            'transmartApp/target/transmart.war', 'transmart-base-ui/dist'
+}
+
+artifacts {
+     archives(file('../../transmart-glowingbear-bundle.tar.bz2')) {
+         classifier = ''
+         extension = 'tar.bz2'
+         name = 'transmart-glowingbear-bundle'
+         type = 'tar.bz2'
+         builtBy buildBundle
+     }
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            def credentials = [
+                // put these in ~/.gradle/gradle.properties
+                userName: project.ext.properties['mavenTheHyveUser'] ?: '',
+                password: project.ext.properties['mavenTheHyvePassword'] ?: '',
+            ]
+
+            repository url: 'https://repo.thehyve.nl/content/repositories/releases/',
+                authentication: credentials
+            snapshotRepository url: 'https://repo.thehyve.nl/content/repositories/snapshots/',
+                authentication: credentials
+
+            pom.project pomConfiguration
+        }
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.1'
+}
