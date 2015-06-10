@@ -10,7 +10,7 @@
 	<project name="transmart-core-api" path="core-api" />
 	<project name="transmart-core-db" path="core-db" />
 	<project name="transmart-rest-api" path="rest-api" />
-	<project name="transmart-base-ui" path="base-ui" remote="thehyve" />
+	<project name="transmart-base-ui" path="base-ui" remote="thehyve" revision="dev" />
 	<project name="transmart-mydas" remote="thehyve" />
 
 	<project name="transmart-dev" remote="thehyve">
