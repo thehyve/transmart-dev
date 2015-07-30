@@ -21,6 +21,7 @@
 	<!-- biomart-domain, search-domain and transmart-java -->
 	<project name="transmart-extensions" />
 	<project name="Rmodules" />
+	<project name="GWAVA" />
 
 	<project name="transmart-dev" remote="thehyve">
 		<copyfile src='upstream-config.json' dest='config.json' />
