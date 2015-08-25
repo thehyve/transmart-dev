@@ -12,7 +12,7 @@
 	<project name="transmart-mydas" remote="thehyve" />
 	<project name="dalliance-plugin" remote="thehyve" />
 	<project name="transmart-gwas-plugin" />
-	<project name="tranSMART-ETL" path="transmart-ETL" />
+	<project name="tranSMART-ETL" path="transmart-ETL" revision="gwava" />
 	<project name="transmart-rest-api" />
 	<project name="transmart-metacore-plugin" />
 	<project name="blend4j-plugin" />
