@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="thehyve" fetch="ssh://git@github.com/thehyve/" />
+    <default remote="thehyve" revision="master" sync-c="true" sync-j="4" />
+
+    <project name="naa-transmartApp" path="transmartApp" />
+    <project name="naa-transmart-gwas" path="transmart-gwas" />
+    <project name="naa-transmart-extensions" path="transmart-extensions" />
+    <project name="naa-transmart-rest-api" path="transmart-rest-api" />
+    <project name="naa-Rmodules" path="Rmodules" />
+    <project name="naa-transmart-legacy-db" path="transmart-legacy-db" />
+    <project name="naa-transmart-core-db" path="transmart-core-db" />
+    <project name="naa-transmart-java" path="transmart-java" />
+    <project name="naa-folder-management" path="folder-management" />
+
+    <project name="transmart-dev">
+      <copyfile src='upstream-config.json' dest='config.json' />
+    </project>
+
+</manifest>
+
