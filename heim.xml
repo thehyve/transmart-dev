@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="thehyve" fetch="ssh://git@github.com/thehyve/" />
+
+	<default remote="thehyve" revision="master" sync-c="true" sync-j="4" />
+
+	<project name="heim-transmartApp" 		path="transmartApp" />
+	<project name="heim-transmart-data" 		path="transmart-data" />
+	<project name="heim-transmart-core-api" 	path="transmart-core-api" />
+	<project name="heim-transmart-core-db" 		path="transmart-core-db" />
+<!--
+	<project name="heim-transmart-mydas" 		path="transmart-mydas" 	remote="thehyve" />
+	<project name="heim-dalliance-plugin" 		path="dalliance-plugin" remote="thehyve" />
+-->
+	<project name="heim-transmart-gwas-plugin" 	path="transmart-gwas-plugin" />
+	<project name="heim-tranSMART-ETL" 		path="transmart-ETL" />
+	<project name="heim-transmart-rest-api" 	path="transmart-rest-api" />
+	<project name="heim-transmart-metacore-plugin" 	path="transmart-metacore-plugin" />
+	<project name="heim-blend4j-plugin" 		path="blend4j-plugin" />
+	<project name="heim-folder-management-plugin" 	path="folder-management-plugin" />
+	<project name="heim-transmart-legacy-db" 	path="transmart-legacy-db" />
+	<!-- biomart-domain, search-domain and transmart-java -->
+	<project name="heim-transmart-extensions" path="transmart-extensions" />
+	<project name="heim-Rmodules" 			path="Rmodules" />
+	<project name="heim-GWAVA" 			path="GWAVA" />
+
+	<project name="transmart-dev" remote="thehyve">
+		<copyfile src='upstream-config.json' dest='config.json' />
+	</project>
+</manifest>
