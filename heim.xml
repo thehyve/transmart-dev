@@ -7,7 +7,7 @@
 	<project name="heim-transmartApp" 		path="transmartApp" />
 	<project name="heim-transmart-data" 		path="transmart-data" />
 	<project name="heim-transmart-core-api" 	path="transmart-core-api" />
-	<project name="transmart-core-db" 		path="transmart-core-db" />
+	<project name="heim-transmart-core-db" 		path="transmart-core-db" />
 <!--
 	<project name="heim-transmart-mydas" 		path="transmart-mydas" 	remote="thehyve" />
 	<project name="heim-dalliance-plugin" 		path="dalliance-plugin" remote="thehyve" />
