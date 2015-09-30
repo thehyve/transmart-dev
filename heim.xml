@@ -13,10 +13,9 @@
 	<project name="heim-blend4j-plugin" 		path="blend4j-plugin" />
 	<project name="heim-folder-management-plugin" 	path="folder-management-plugin" />
 	<project name="heim-transmart-legacy-db" 	path="transmart-legacy-db" />
-	<!-- biomart-domain, search-domain and transmart-java -->
 	<project name="heim-transmart-extensions" path="transmart-extensions" />
 	<project name="heim-Rmodules" 			path="Rmodules" />
-
+        <project name="naa-transmart-gwas" path="transmart-gwas-plugin" />
 	<project name="transmart-dev" remote="thehyve">
 		<copyfile src='upstream-config.json' dest='config.json' />
 	</project>
