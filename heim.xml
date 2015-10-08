@@ -5,7 +5,7 @@
     <default remote="thehyve" revision="master" sync-c="true" sync-j="4"/>
 
     <project name="heim-transmartApp" path="transmartApp"/>
-    <project name="heim-SmartR" path="SmartR"/>
+    <project name="heim-SmartR" path="smartR"/>
     <project name="heim-transmart-data" path="transmart-data"/>
     <project name="heim-transmart-core-api" path="transmart-core-api"/>
     <project name="heim-transmart-core-db" path="transmart-core-db"/>
