@@ -10,6 +10,7 @@
     <project name="naa-Rmodules" path="Rmodules" />
     <project name="naa-transmart-legacy-db" path="transmart-legacy-db" />
     <project name="naa-transmart-core-db" path="transmart-core-db" />
+    <project name="naa-transmart-core-api" path="transmart-core-api" />
     <project name="naa-folder-management" path="folder-management-plugin" />
 
     <project name="transmart-dev">
