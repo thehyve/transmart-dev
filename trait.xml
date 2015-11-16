@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="trait" fetch="ssh://git@github.com/CTMM-TraIT/" />
+	<remote name="transmart" fetch="ssh://git@github.com/transmart/" />
+	<remote name="thehyve" fetch="ssh://git@github.com/thehyve/" />
+
+	<default remote="trait" revision="master" sync-c="true" sync-j="4" />
+
+	<project name="transmartApp" />
+	<project name="transmart-core-api" />
+	<project name="transmart-core-db" />
+	<project name="transmart-mydas" />
+	<project name="dalliance-plugin" />
+	<project name="transmart-gwas-plugin" />
+	<project name="transmart-rest-api" />
+	<project name="transmart-metacore-plugin" />
+	<project name="blend4j-plugin" />
+	<project name="folder-management-plugin" />
+	<project name="transmart-legacy-db" />
+	<!-- biomart-domain, search-domain and transmart-java -->
+	<project name="transmart-extensions" />
+	<project name="Rmodules" />
+	<project name="SmartR" />
+	<project name="transmart-xnat-importer-plugin" />
+
+	<project name="transmart-dev" remote="thehyve">
+		<copyfile src='upstream-config.json' dest='config.json' />
+	</project>
+</manifest>
