@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="transmart" fetch="ssh://git@github.com/transmart/" />
+	<remote name="thehyve" fetch="ssh://git@github.com/thehyve/" />
+
+	<default remote="transmart" revision="master" sync-c="true" sync-j="4" />
+
+	<project name="transmartApp" revision="1.3.alpha" />
+	<project name="transmart-data" />
+	<project name="transmart-core-api" />
+	<project name="transmart-core-db" />
+	<project name="transmart-mydas" remote="thehyve" />
+	<project name="dalliance-plugin" remote="thehyve" />
+	<project name="transmart-gwas-plugin" />
+	<project name="tranSMART-ETL" path="transmart-ETL" />
+	<project name="transmart-rest-api" />
+	<project name="transmart-metacore-plugin" />
+	<project name="blend4j-plugin" />
+	<project name="folder-management-plugin" />
+	<project name="transmart-legacy-db" />
+	<!-- biomart-domain, search-domain and transmart-java -->
+	<project name="transmart-extensions" />
+	<project name="Rmodules" revision="1.3.alpha" />
+	<project name="GWAVA" />
+
+	<project name="transmart-dev" remote="thehyve">
+		<copyfile src='upstream-config.json' dest='config.json' />
+	</project>
+</manifest>
