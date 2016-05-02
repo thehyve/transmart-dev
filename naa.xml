@@ -13,6 +13,7 @@
     <project name="naa-transmart-core-api" path="transmart-core-api" />
     <project name="naa-folder-management" path="folder-management-plugin" />
     <project name="naa-SmartR" path="smartR" />
+    <project name="transmart-data" revision="projects/VEEN" />
 
     <project name="transmart-dev">
       <copyfile src='upstream-config.json' dest='config.json' />
