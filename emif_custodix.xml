@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="transmart" fetch="ssh://git@github.com/transmart/" />
+	<remote name="thehyve" fetch="ssh://git@github.com/thehyve/" />
+
+	<default remote="transmart" revision="master" sync-c="true" sync-j="4" />
+
+	<project name="transmartApp" remote="thehyve" revision="emif_custodix" />
+	<project name="transmart-data" revision="4312957121466f91160e270d5e4c983e62889eaa" />
+	<project name="transmart-core-api" revision="8fc1f7f51d29eee8d2495b8f2ae3caf2e2a0d1d4" />
+	<project name="transmart-core-db" revision="630bbd2bbc625a82dfeb4f71c6d227f86398a437" />
+	<project name="transmart-mydas" remote="thehyve" revision="21b548365ab89693501ffa1032950e3a3fb48fa7" />
+	<project name="dalliance-plugin" remote="thehyve" revision="7146a2428927dec603be46c5042541406a4890d3" />
+	<project name="transmart-gwas-plugin" revision="73790df39cdc6643c9283621a423985dc9af5692" />
+	<project name="transmart-rest-api" revision="684c07f561f55e30b867b41c8a00eb6506d069da" />
+	<project name="folder-management-plugin" revision="cd2764bb2bbf5cfceeac60cb629ab61a82a1e100" />
+	<project name="transmart-legacy-db" revision="607e56ee11ccb9a2f23d11a2349d8c69db2a5cef" />
+	<!-- biomart-domain, search-domain and transmart-java -->
+	<project name="transmart-extensions" revision="46b082a32c9c0e024e4f1c50769a54d6ec526748" />
+	<project name="Rmodules" revision="aa47c0db0e86fc156fecfe5b528d0b70bf7e5f3c" />
+
+	<project name="transmart-dev" remote="thehyve">
+		<copyfile src='upstream-config.json' dest='config.json' />
+	</project>
+</manifest>
